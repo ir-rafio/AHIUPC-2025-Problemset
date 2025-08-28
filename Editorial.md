@@ -384,110 +384,110 @@ Try to relate it with gcd.
 <details>
 <summary>Hint 2</summary>
 
-`m` is fixed for any testcase.
+$m$ is fixed for any testcase.
 
 </details>
 
 <details>
 <summary>Hint 3</summary>
 
-Highest number of divisors of `m` is `48`.
+Highest number of divisors of $m$ is $48$.
 
 </details>
 
 <details>
 <summary>Solution</summary>
 
-Let's try to determine for any value of `k` which number `a` will be `k-good`.
+Let's try to determine for any value of $k$ which number $a$ will be `k-good`.
 
-Formally, you can write `a` will be `k-good` if  
-\[
+Formally, you can write $a$ will be `k-good` if  
+$$
 a + kx \equiv 0 \pmod{m}
-\]
+$$
 is unsolvable.
 
 Rewriting the equation you get:  
-\[
+$$
 a + kx = my \quad , \quad (x, y \in \mathbb{Z}, \, x > 0, y > 0)
-\]
+$$
 
-\[
+$$
 \Rightarrow my - kx = a
-\]
+$$
 
 ---
 
 **Case 1: When a is not divisible by gcd(m, k).**
 
 Let  
-\[
+$$
 g = \gcd(m, k), \quad m' = \frac{m}{g}, \quad k' = \frac{k}{g}
-\]
+$$
 
-\[
+$$
 my - kx = a
-\]
-\[
+$$
+$$
 \Rightarrow g m' y - g k' x = a
-\]
+$$
 
-This equation will be solvable for integer values of \(x\) and \(y\), only if \(a\) is divisible by \(g\).  
+This equation will be solvable for integer values of $x$ and $y$, only if $a$ is divisible by $g$.  
 
-So if \(a\) is not divisible by \(g\), \(a\) must be a `k-good` number.
+So if $a$ is not divisible by $g$, $a$ must be a `k-good` number.
 
 ---
 
 **Case 2: When a is divisible by gcd(m, k).**
 
-[Bézout's identity](https://proofwiki.org/wiki/B%C3%A9zout%27s_Identity) states that for any pair of integers \((p, q)\) there exists a pair of integers \((x, y)\) such that
+[Bézout's identity](https://proofwiki.org/wiki/B%C3%A9zout%27s_Identity) states that for any pair of integers $(p, q)$ there exists a pair of integers $(x, y)$ such that
 
-\[
+$$
 px + qy = \gcd(p, q)
-\]
-\[
+$$
+$$
 \Rightarrow px - (-qy) = \gcd(p, q)
-\]
-\[
+$$
+$$
 \Rightarrow px - qy = \gcd(p, q)
-\]
+$$
 
-You can add enough \(pq\) to both \(px\) and \(qy\) to ensure that both \(x\) and \(y\) become positive without changing the right side of the equation.  
+You can add enough $pq$ to both $px$ and $qy$ to ensure that both $x$ and $y$ become positive without changing the right side of the equation.  
 So the equation  
-\[
+$$
 px - qy = \gcd(p, q)
-\]
-is solvable for \((x > 0, y > 0)\).
+$$
+is solvable for $(x > 0, y > 0)$.
 
-Replacing \(p, q\) with \(m, k\):  
-\[
-mx - ky = g \quad , \quad g = \gcd(m, k) \quad \rightarrow \quad \text{solvable.}
-\]
+Replacing $p, q$ with $m, k$:  
+$$
+mx - ky = g \quad , \quad g = \gcd(m, k) 
+$$
 
-Multiplying both sides by \(a / g\) you get:  
-\[
+Multiplying both sides by $\frac{a}{g}$ you get:  
+$$
 mx' - ky' = a
-\]
+$$
 
-Since \(a / g\) is an integer (as \(a\) is divisible by \(g\)), this equation is solvable.  
-So \(a\) will not be a `k-good` number.
+Since $\frac{a}{g}$ is an integer (as $a$ is divisible by $g$), this equation is solvable.  
+So $a$ will not be a `k-good` number.
 
 ---
 
 **Final Reduction**
 
-For any number \(a\) to be `k-good` it should **not** be divisible by \(\gcd(m, k)\).  
+For any number $a$ to be `k-good` it should **not** be divisible by $\gcd(m, k)$.  
 
-So the problem is reduced to finding the number of integers in the range \([l, r]\) that are divisible by \(\gcd(m, k)\).  
+So the problem is reduced to finding the number of integers in the range $[l, r]$ that are divisible by $\gcd(m, k)$.  
 
-As \(m\) is fixed for a testcase and \(\gcd(m, k)\) will be a divisor of \(m\),  
-you can maintain a data structure (Segment Tree or Fenwick Tree) for each divisor of \(m\).  
+As $m$ is fixed for a testcase and $\gcd(m, k)$ will be a divisor of $m$,  
+you can maintain a data structure (Segment Tree or Fenwick Tree) for each divisor of $m$.  
 
-Let **nod(m)** denote the number of divisors of \(m\).  
-The number of divisors of \(m\) will not exceed **48**.
+Let **nod(m)** denote the number of divisors of $m$.  
+The number of divisors of $m$ will not exceed **48**.
 
-- Data structure initialization takes \(\mathcal{O}(\text{nod}(m) \cdot n \cdot \log n)\) time.  
-- Query 2 can be done in \(\mathcal{O}(\log n)\) time.  
-- Query 1 can be done in \(\mathcal{O}(\log n \cdot \text{nod}(m))\) time.
+- Data structure initialization takes $\mathcal{O}(\text{nod}(m) \cdot n \cdot \log n)$ time.  
+- Query 2 can be done in $\mathcal{O}(\log n)$ time.  
+- Query 1 can be done in $\mathcal{O}(\log n \cdot \text{nod}(m))$ time.
 
 <details> 
 <summary>Code</summary>
@@ -585,13 +585,13 @@ signed main() {
 <details>
 <summary>Alternate Solution</summary>
 
-This problem can also be solved for higher values of \(m \, (m \leq 10^9)\).
+This problem can also be solved for higher values of $m \, (m \leq 10^9)$.
 
-Instead of Segment Tree / Fenwick Tree, you can divide the whole array into square root blocks and maintain the information (how many numbers in this block are divisible by a certain divisor of \(m\)) for each block.
+Instead of Segment Tree / Fenwick Tree, you can divide the whole array into square root blocks and maintain the information (how many numbers in this block are divisible by a certain divisor of $m$) for each block.
 
-- Preprocessing takes \(\mathcal{O}(\max(n \cdot \text{nod}(m), \sqrt{m}))\) time.  
-- Query 2 can be done in \(\mathcal{O}(\sqrt{n})\) time.  
-- Query 1 can be done in \(\mathcal{O}(\text{nod}(m))\) time, which will not exceed **1344** for \((m \leq 10^9)\).
+- Preprocessing takes $\mathcal{O}(\max(n \cdot \text{nod}(m), t \cdot \sqrt{m}))$ time.  
+- Query 2 can be done in $\mathcal{O}(\sqrt{n})$ time.  
+- Query 1 can be done in $\mathcal{O}(\text{nod}(m))$ time, which will not exceed **1344** for $(m \leq 10^9)$.
 
 <details>
 <summary>Code</summary>
