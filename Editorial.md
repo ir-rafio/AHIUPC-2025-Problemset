@@ -401,35 +401,22 @@ Highest number of divisors of $m$ is $48$.
 Let's try to determine for any value of $k$ which number $a$ will be `k-good`.
 
 Formally, you can write $a$ will be `k-good` if  
-$$
-a + kx \equiv 0 \pmod{m}
-$$
+$a + kx \equiv 0 \pmod{m}$
 is unsolvable.
 
 Rewriting the equation you get:  
-$$
-a + kx = my \quad , \quad (x, y \in \mathbb{Z}, \, x > 0, y > 0)
-$$
-
-$$
-\Rightarrow my - kx = a
-$$
+$a + kx = my \quad , \quad (x, y \in \mathbb{Z}, \, x > 0, y > 0)$
+$\Rightarrow my - kx = a$
 
 ---
 
 **Case 1: When a is not divisible by gcd(m, k).**
 
-Let  
-$$
-g = \gcd(m, k), \quad m' = \frac{m}{g}, \quad k' = \frac{k}{g}
-$$
+Let,  
+$g = \gcd(m, k), \quad m' = \frac{m}{g}, \quad k' = \frac{k}{g}$
 
-$$
-my - kx = a
-$$
-$$
-\Rightarrow g m' y - g k' x = a
-$$
+$my - kx = a$
+$\Rightarrow g m' y - g k' x = a$
 
 This equation will be solvable for integer values of $x$ and $y$, only if $a$ is divisible by $g$.  
 
@@ -441,32 +428,20 @@ So if $a$ is not divisible by $g$, $a$ must be a `k-good` number.
 
 [Bézout's identity](https://proofwiki.org/wiki/B%C3%A9zout%27s_Identity) states that for any pair of integers $(p, q)$ there exists a pair of integers $(x, y)$ such that
 
-$$
-px + qy = \gcd(p, q)
-$$
-$$
-\Rightarrow px - (-qy) = \gcd(p, q)
-$$
-$$
-\Rightarrow px - qy = \gcd(p, q)
-$$
+$px + qy = \gcd(p, q)$
+$\Rightarrow px - (-qy) = \gcd(p, q)$
+$\Rightarrow px - qy = \gcd(p, q)$
 
 You can add enough $pq$ to both $px$ and $qy$ to ensure that both $x$ and $y$ become positive without changing the right side of the equation.  
 So the equation  
-$$
-px - qy = \gcd(p, q)
-$$
-is solvable for $(x > 0, y > 0)$.
+
+$px - qy = \gcd(p, q)$ is solvable for $(x > 0, y > 0)$.
 
 Replacing $p, q$ with $m, k$:  
-$$
-mx - ky = g \quad , \quad g = \gcd(m, k) 
-$$
+$mx - ky = g \quad , \quad g = \gcd(m, k)$
 
 Multiplying both sides by $\frac{a}{g}$ you get:  
-$$
-mx' - ky' = a
-$$
+$mx' - ky' = a$
 
 Since $\frac{a}{g}$ is an integer (as $a$ is divisible by $g$), this equation is solvable.  
 So $a$ will not be a `k-good` number.
