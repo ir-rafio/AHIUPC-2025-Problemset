@@ -451,7 +451,7 @@ So $a$ will not be a `k-good` number.
 
 For any number $a$ to be `k-good` it should **not** be divisible by $\gcd(m, k)$.  
 
-So the problem is reduced to finding the number of integers in the range $[l, r]$ that are divisible by $\gcd(m, k)$.  
+So the problem is reduced to finding the number of integers in the range $[l, r]$ that are not divisible by $\gcd(m, k)$.  
 
 As $m$ is fixed for a testcase and $\gcd(m, k)$ will be a divisor of $m$,  
 you can maintain a data structure (Segment Tree or Fenwick Tree) for each divisor of $m$.  
@@ -704,9 +704,9 @@ signed main() {
 
 This problem can also be solved for higher values of $m \, (m \leq 10^9)$.
 
-Instead of Segment Tree / Fenwick Tree, you can divide the whole array into square root blocks and maintain the information (how many numbers in this block are divisible by a certain divisor of $m$) for each block.
+Instead of Segment Tree / Fenwick Tree, you can divide the whole array into $\sqrt{n}$ blocks each of size $\sqrt{n}$ and maintain the information (how many numbers in this block are not divisible by a certain divisor of $m$) for each block.
 
-- Preprocessing takes $\mathcal{O}(\max(n \cdot \text{nod}(m), t \cdot \sqrt{m}))$ time.  
+- Preprocessing takes $\mathcal{O}(n \cdot \text{nod}(m) + t \cdot \sqrt{m})$ time.  
 - Query 2 can be done in $\mathcal{O}(\sqrt{n})$ time.  
 - Query 1 can be done in $\mathcal{O}(\text{nod}(m))$ time, which will not exceed **1344** for $(m \leq 10^9)$.
 
