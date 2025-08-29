@@ -11,7 +11,7 @@
 | ------------------------------------------------------------------------------- | --------------------------------------- |
 | [Saom Bin Khaled](https://codeforces.com/profile/greenbinjack)                  | **Problem Setter**                      |
 | [Nayeem Hossain](https://codeforces.com/profile/flying_saucer)                  | **Problem Setter**                      |
-| [Mahiul Kabir](https://codeforces.com/profile/greenbinjack)                     | **Problem Tester**                      |
+| [Mahiul Kabir](https://atcoder.jp/users/rbwkai)                                 | **Problem Tester**                      |
 | [Akib Haider](https://codeforces.com/profile/_akibhaider_)                      | **Problem Setter**                      |
 | [Mushfiq Talha](https://codeforces.com/profile/MushfiqTalha)                    | **Problem Tester**                      |
 | [Adib Farhan](https://codeforces.com/profile/Brownbear2710)                     | **Problem Tester**                      |
