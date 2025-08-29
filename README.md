@@ -2,8 +2,8 @@
 
 ## Links
 
-Main Contest: https://codeforces.com/gym/629683
-Replay Contest: https://codeforces.com/gym/106045
+#### Main Contest: https://codeforces.com/gym/629683
+#### Replay Contest: https://codeforces.com/gym/106045
 
 ## Credits
 
@@ -18,7 +18,7 @@ Replay Contest: https://codeforces.com/gym/106045
 | [Adib Farhan](https://codeforces.com/profile/Brownbear2710)                     | **Problem Setter**                      |
 | [Akib Haider](https://codeforces.com/profile/_akibhaider_)                      | **Problem Setter**                      |
 | [Nayeem Hossain](https://codeforces.com/profile/flying_saucer)                  | **Problem Setter**                      |
-| [Saom bin Khaled](https://codeforces.com/profile/greenbinjack)                  | **Problem Setter**                      |
+| [Saom Bin Khaled](https://codeforces.com/profile/greenbinjack)                  | **Problem Setter**                      |
 | [Asaduzzaman Herok](https://codeforces.com/profile/Atondro_Wahid)               | **Problem Tester**                      |
 | [Mahiul Kabir](https://codeforces.com/profile/greenbinjack)                     | **Problem Tester**                      |
 | [Imtiaz Tanweer Rahim](https://codeforces.com/profile/Reewnat)                  | **Problem Tester**                      |
