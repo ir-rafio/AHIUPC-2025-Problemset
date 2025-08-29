@@ -404,7 +404,7 @@ Formally, you can write $a$ will be `k-good` if
 $a + kx \equiv 0 \pmod{m}$ is unsolvable.
 
 Rewriting the equation you get:  
-$a + kx = my \quad , \quad (x, y \in \mathbb{Z}, \, x > 0, y > 0)$  
+$a + kx = my \quad , \quad (\ x,\ y \in \mathbb{Z} ,\ x > 0,\ y > 0)$  
 $\Rightarrow my - kx = a$ 
 
 ---
