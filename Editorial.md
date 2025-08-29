@@ -1616,7 +1616,8 @@ Finally, to count all triples (a, b, c) that fit inside the semicircle, you need
 You need to generate primitive triples with $c \le d$.  
 Since $c = p^2 + q^2$, it suffices to consider $p \le \sqrt{d}$.  
 For each $p$, you iterate over possible $q < p \le \sqrt{d}$.  
-So, the overall time complexity $= \mathcal{O}(\sqrt{d} \times \sqrt{d}) = \mathcal{O}(d) = \mathcal{O}(r)$
+In each iteration, you have to check the $GCD$.  
+So, the overall time complexity $= \mathcal{O}(\sqrt{d} \times \sqrt{d} \times \log\sqrt{d}) = \mathcal{O}(d \log d) = \mathcal{O}(r \log r)$
 
 <details>
 <summary>Code</summary>
@@ -1966,7 +1967,7 @@ $[x\ AND\ x = x]$ and $[x\ OR\ x = x]$. So, if the bits of some positions do not
 So, to find the result of the bitwise AND and bitwise OR, you need to know the positions where the bits flipped at least once and where the bits remained unflipped.  
 The flipped bits will always be a suffix and in the leftmost position with at least one flip, $L$ will have a $0$ and $R$ will have a $1$.  
 Search for that bit position by iterating from right to left. Since $2^{60} > 10^{18}$, you only need to search from position $60$ to position $0$.  
-If the position with the leftmost flip is $i$, all bits from $0$ to $i$ have flipped and all bits to the right remained unflipped. So in the result, all bits from $0$ to $i$ will have $0$ in AND and $1$ in OR. Since all bits to the left are unflipped, they will be directly carried to the result.
+If the position with the leftmost flip is $i$, all bits from $0$ to $i$ have flipped and all bits to the left remained unflipped. So in the result, all bits from $0$ to $i$ will have $0$ in AND and $1$ in OR. Since all bits to the left are unflipped, they will be directly carried to the result.
 
 ---
 
