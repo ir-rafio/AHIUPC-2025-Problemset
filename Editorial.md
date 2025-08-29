@@ -1200,7 +1200,6 @@ The time complexity is still $\mathcal{O}(n)$ because you have to count the valu
 
 <details>
 <summary>Code</summary>
-#include <bits/stdc++.h>
 
 ```cpp
 #include <bits/stdc++.h>
