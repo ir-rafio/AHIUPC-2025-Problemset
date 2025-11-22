@@ -2192,7 +2192,7 @@ void ans(int x, int y)
 
 void pre()
 {
-    fastio;
+    // fastio;
 
 
 }
