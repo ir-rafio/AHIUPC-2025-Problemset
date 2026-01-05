@@ -1579,7 +1579,7 @@ Now, $c^2 = a^2 + b^2$
  $=> (c + a)(c - a) = b^2$  
  $=> \displaystyle\frac{c + a}{b} = \frac{b}{c - a}$
 
-Let $\displaystyle\frac{c + a}{b} = \frac{b}{c - a} = \frac{p}{q}$, where $p$ and $q$ are positive co-prime integers \[$p > q$ since $c + a > c > b$\].
+Let $\displaystyle\frac{c + a}{b} = \frac{b}{c - a} = \frac{p}{q}$, where $p$ and $q$ are positive co-prime integers \[ $p > q$ since $c + a > c > b$\].
 
 So, $\displaystyle \frac{c}{b} + \frac{a}{b} = \frac{p}{q} \text{ and } \frac{c}{b} - \frac{a}{b} = \frac{q}{p}$
 
@@ -2248,5 +2248,3 @@ int main()
 </details>
 </details>
 </details>
-
----
